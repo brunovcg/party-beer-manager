@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const MyButton = styled.button`
-
     width: 80px;
     height: 30px;
     background-color: ${props=>props.setColor};
@@ -14,11 +13,7 @@ const MyButton = styled.button`
     transition: 0.8s;
     :hover{
         opacity: 50%;
-        
     }
-
-
-
 `
 
 export default MyButton;

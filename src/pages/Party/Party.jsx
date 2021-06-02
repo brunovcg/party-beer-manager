@@ -10,12 +10,10 @@ const Party = () => {
         subParty(product)
     }
 
-
     return(
         <>
             <Title>Party</Title>
             <Container>{partyList.map((item, index)=>
-                
                 <DrinkCard
                     key={index}
                     name={item.name}

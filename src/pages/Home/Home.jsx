@@ -2,11 +2,9 @@ import {useHome} from '../../hooks/homeContext';
 import DrinkCard from '../../components/DrinkCard/DrinkCard'
 import {Container, Title} from "./styles"
 
-
 const Home = () => {
 
     const {products} = useHome();
-    
 
     return(
         <>
@@ -20,7 +18,6 @@ const Home = () => {
                     description={item.description}
                     size={`${item.volume.value} ${item.volume.unit}`}
                     product={item}
-
                 >{item.name}
                 </DrinkCard>)}
             </Container>

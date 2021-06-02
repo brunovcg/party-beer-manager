@@ -63,18 +63,11 @@ const Card = styled.div`
         }
     }
 
-
-
     @media (max-width: 450px) {
         width: 80%;
         flex-direction: row;
         height: fit-content;
         padding: 10px;
-
-        button{
-            
-        }
-
 
         figure{
             height: 10%;
@@ -113,12 +106,7 @@ const Card = styled.div`
                 padding-top: 5px;
             }
         }
-
-        
-
     }
-
-
 `
 
 export default Card

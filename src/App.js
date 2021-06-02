@@ -2,7 +2,6 @@ import Routes from './Routes/Routes';
 import Header from  './components/Header/Header';
 import OuterContainer from './styles/AppStyle';
 
-
 function App() {
   return (
     <OuterContainer>

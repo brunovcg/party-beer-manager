@@ -10,12 +10,10 @@ const Graduation = () => {
         subGraduation(product)
     }
 
-
     return(
         <>
             <Title>Graduation</Title>
             <Container>{graduationList.map((item, index)=>
-                
                 <DrinkCard
                     key={index}
                     name={item.name}

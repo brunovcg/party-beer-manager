@@ -5,7 +5,6 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import Hooks from './hooks'
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Hooks>

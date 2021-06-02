@@ -5,12 +5,9 @@ const Button = ({children, setColor, click}) => {
 
     return(
       <MyButton 
-      
-        setColor={setColor}
-        onClick={click}
-        
+          setColor={setColor}
+          onClick={click}
         >{children}
-      
       </MyButton>
     )
 }

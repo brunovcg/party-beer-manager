@@ -2,7 +2,6 @@ import DrinkCard from '../../components/DrinkCard/DrinkCard'
 import {Container, Title} from "./styles"
 import {useMarriage} from '../../hooks/marriageContext'
 
-
 const Marriage = () => {
 
     const {subMarriage, marriageList} = useMarriage();
@@ -10,7 +9,6 @@ const Marriage = () => {
     const remove = (product)=>{
         subMarriage(product)
     }
-
 
     return(
         <>

@@ -21,8 +21,6 @@ export const PartyProvider = ({children}) => {
         const newList = partyList.filter(
             (item)=>item.id !== product.id
         );
-
-
         setPartyList(newList)
     }
 

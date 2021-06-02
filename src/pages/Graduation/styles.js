@@ -5,7 +5,6 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     min-height: 600px;
-
 `
 
 export const Title = styled.h3`

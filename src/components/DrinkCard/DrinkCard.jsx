@@ -18,7 +18,6 @@ const DrinkCard = ({name, image, first_brewed, description, size, isRemovable, p
     const {addMarriage} = useMarriage();
     const {addParty} = useParty();
 
-
     return(
         <Card>
             <figure><img src={image} alt="foto" /></figure>
@@ -64,13 +63,11 @@ const DrinkCard = ({name, image, first_brewed, description, size, isRemovable, p
                                 setColor="green"
                               >Graduation
                             </Button>
-
                         </div>
                     }   
                 </div>
             }
             </div>
-
         </Card>
     )
 }
