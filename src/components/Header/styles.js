@@ -23,7 +23,7 @@ const HeaderContainer = styled.div`
 
             p{
                 color: grey;
-                font-size: 12px;
+                font-size: 16px;
             }
         }
 

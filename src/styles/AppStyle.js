@@ -5,6 +5,7 @@ const OuterContainer = styled.div`
   text-align: center;
   height: 700px;;
   min-height: 100vh;
+  height: fit-content;
   width: 100vw;
 
   .InnerContainer {
