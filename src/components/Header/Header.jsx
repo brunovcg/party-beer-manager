@@ -1,6 +1,9 @@
 import HeaderContainer from './styles'
 import Button from '../Button/Button'
 import {useHistory} from 'react-router-dom'
+import { useGraduation } from '../../hooks/graduationContext';
+import { useMarriage } from '../../hooks/marriageContext';
+import { useParty } from '../../hooks/partyContext';
 
 const Header = () => {
 
@@ -10,6 +13,9 @@ const Header = () => {
         return history.push(path)
     }
 
+    const {graduationList} = useGraduation()
+    const {marriageList} = useMarriage()
+    const {partyList} = useParty()
 
     return(
         <HeaderContainer>
@@ -18,22 +24,21 @@ const Header = () => {
             <section>
                 <div className="typeParty">
                     <Button click={()=>goThere("/")} setColor="red">Home</Button>
-                    <p>{`itens: ${3}`}</p>
                 </div>
                 
                 <div className="typeParty">
                     <Button click={()=>goThere("/party")} setColor="blue">Party</Button>
-                    <p>{`itens: ${3}`}</p>
+                    <p>{`itens: ${partyList.length}`}</p>
                 </div>
 
                 <div className="typeParty">
                     <Button click={()=>goThere("/marriage")} setColor="orange">Marriage</Button>
-                    <p>{`itens: ${3}`}</p>
+                    <p>{`itens: ${marriageList.length}`}</p>
                 </div>
 
                 <div className="typeParty">
                     <Button click={()=>goThere("/graduation")} setColor="green">Graduation</Button>
-                    <p>{`itens: ${3}`}</p>
+                    <p>{`itens: ${graduationList.length}`}</p>
                 </div>
             </section>
             

@@ -1,5 +1,7 @@
 import { HomeProvider } from "./homeContext";
 import { GraduationProvider } from "./graduationContext";
+import {MarriageProvider} from './marriageContext'
+import {PartyProvider} from './partyContext'
 
 
 const Hooks = ({ children }) => {
@@ -7,7 +9,11 @@ const Hooks = ({ children }) => {
      
         <HomeProvider>
             <GraduationProvider>
-             {children}
+                <MarriageProvider>
+                    <PartyProvider>
+                        {children}
+                     </PartyProvider>
+                 </MarriageProvider>
             </GraduationProvider>
         </HomeProvider>
     

@@ -1,25 +1,34 @@
 import DrinkCard from '../../components/DrinkCard/DrinkCard'
-import Container from "./styles"
+import {Container, Title} from "./styles"
 import {useGraduation} from '../../hooks/graduationContext'
 
 const Graduation = () => {
 
-    const {addGraduation, subGraduation, graduationList} = useGraduation();
+    const {subGraduation, graduationList} = useGraduation();
+
+    const remove = (product)=>{
+        subGraduation(product)
+    }
 
 
     return(
-        <Container>{graduationList.map((item, index)=>
-            <DrinkCard
-                key={index}
-                name={item.name}
-                image={item.image_url}
-                first_brewed={item.first_brewed} 
-                description={item.description}
-                size={`${item.volume.value} ${item.volume.unit}`}
-                isRemovable
-            >{item.name}
-            </DrinkCard>)}
-        </Container>
+        <>
+            <Title>Graduation</Title>
+            <Container>{graduationList.map((item, index)=>
+                
+                <DrinkCard
+                    key={index}
+                    name={item.name}
+                    image={item.image_url}
+                    first_brewed={item.first_brewed} 
+                    description={item.description}
+                    size={`${item.volume.value} ${item.volume.unit}`}
+                    isRemovable
+                    remove={()=>remove(item)}
+                >{item.name}
+                </DrinkCard>)}
+            </Container>
+        </>
     )
 }
 

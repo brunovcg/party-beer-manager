@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 `
 
-export default Container
+export const Title = styled.h3`
+
+    font-size: 50px;
+    margin: 15px;
+    color: red;
+`
+
