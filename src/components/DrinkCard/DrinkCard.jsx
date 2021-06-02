@@ -20,15 +20,20 @@ const DrinkCard = ({name, image, first_brewed, description, size, isRemovable, p
 
     return(
         <Card>
-            <figure><img src={image} alt="foto" /></figure>
-            <h3>{name}</h3>
-            <Button 
-                setColor="darkgray"
-                click={showDetails}
-                >{details ? "esconder" : "detalhes"}
-            </Button>
+            <section className="imgName">
+                <figure><img src={image} alt="foto" /></figure>
+                <h3>{name}</h3>
+            </section>
 
-            <div className= "bottomContainer">
+            <section className="detailButton">
+                <Button 
+                    setColor="darkgray"
+                    click={showDetails}
+                    >{details ? "esconder" : "detalhes"}
+                </Button>
+            </section>
+
+            <section className= "buttonContainer">
                 { details ?
                 <div className="details">
                     <div className="fab">since: {first_brewed}</div>
@@ -67,7 +72,7 @@ const DrinkCard = ({name, image, first_brewed, description, size, isRemovable, p
                     }   
                 </div>
             }
-            </div>
+            </section>
         </Card>
     )
 }
